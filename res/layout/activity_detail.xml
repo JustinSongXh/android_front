@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/white_back">
+    <ScrollView
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<LinearLayout
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+    	<LinearLayout
+			android:orientation="horizontal" android:layout_width="fill_parent"
+			android:layout_height="163dp"
+            android:background="@drawable/detial_pic">
+        
+        	<Button
+			   	android:id="@+id/buttonDetailComment"
+		    	android:layout_width="50dp"
+		        android:layout_height="50dp"
+			    android:layout_marginBottom="5dp"
+                android:layout_marginTop="50dp"
+			    android:text="评论"
+		        android:background="@drawable/rectangle_button_circle"
+		        android:textColor="@color/white"
+                android:layout_marginLeft="170dp" />
+        	        
+        	<Button
+			   	android:id="@+id/buttonDetailJoin"
+		    	android:layout_width="50dp"
+		        android:layout_height="50dp"
+			    android:layout_marginBottom="5dp"
+                android:layout_marginTop="50dp"
+			    android:text="加入"
+		        android:background="@drawable/rectangle_button_circle_blue"
+		        android:textColor="@drawable/rectangle_button_text"
+                android:layout_marginLeft="20dp" />
+        	        
+        	<Button
+			   	android:id="@+id/buttonDetailSave"
+		    	android:layout_width="50dp"
+		        android:layout_height="50dp"
+			    android:layout_marginBottom="5dp"
+                android:layout_marginTop="50dp"
+			    android:text="收藏"
+		        android:background="@drawable/rectangle_button_circle_orange"
+		        android:textColor="@drawable/rectangle_button_text"
+                android:layout_marginLeft="20dp" />
+        </LinearLayout>								
+        
+    <LinearLayout android:id="@+id/LinearLayout0"
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+		<RelativeLayout
+			android:orientation="horizontal" android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:background="#ffe8e8e8">
+    		<LinearLayout android:id="@+id/thumbnail"   
+        		android:layout_width="wrap_content"  
+        		android:layout_height="wrap_content"  
+        		android:padding="3dip"        
+        		android:layout_alignParentRight="true"  
+        		android:layout_marginRight="5dip">  
+          
+        		<ImageView       
+            	android:id="@+id/imageViewDetailAuthor"     
+            	android:layout_width="50dip"  
+            	android:layout_height="50dip"  />
+          
+ 		   </LinearLayout>  
+		    
+			<TextView android:id="@+id/textViewDetailTitle"
+			 	android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/thumbnail"
+        		android:gravity="left"
+        		android:layout_alignParentLeft="true"
+        		android:textColor="#040404"  
+        		android:typeface="sans"   
+        		android:textSize="30dip"  
+				android:layout_marginLeft="10dip"
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true">
+			</TextView>
+
+			
+			
+		</RelativeLayout>
+	    <LinearLayout
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+			<TextView android:id="@+id/textViewDetailStartTime" 
+				android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+        		android:textColor="@color/gray"
+        		android:textSize="20dip"  
+        		android:gravity="left"
+        		android:layout_marginTop="1dip"  
+        		android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content">
+			</TextView>
+	    	<TextView android:id="@+id/textViewDetailAddress"
+				android:textColor="@color/gray"
+				android:gravity="left"
+				android:text="活动地点："
+				android:textSize="20dip"
+				android:layout_marginLeft="5dp"
+				android:layout_marginRight="5dp"
+				android:layout_alignParentLeft="true"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content">
+			</TextView>
+	        			
+		    <RelativeLayout
+				android:orientation="horizontal" android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+		        	        
+				<EditText android:id="@+id/EditTextDetailAddress"
+				    android:layout_marginLeft="5dp"
+				    android:layout_marginBottom="5dp"
+					android:textColor="@color/gray" android:layout_height="wrap_content"
+					android:layout_width="fill_parent"
+                    style="@null">
+				</EditText>
+				<Button
+		   			android:id="@+id/buttonDetailMap"
+		        	android:layout_width="40dp"
+		        	android:layout_height="40dp"
+				    android:layout_alignParentRight="true"
+				    android:layout_marginBottom="5dp"
+				    android:layout_marginRight="5dp"
+				    android:layout_gravity="right"
+				    android:layout_marginTop="3dp"
+                    android:background="@drawable/checkbox_pressed"
+			        android:textColor="@drawable/rectangle_button_text" />								
+			</RelativeLayout>
+			
+			<com.baidu.mapapi.map.MapView  
+   	 			android:id="@+id/bmapViewDetail"  
+    			android:layout_width="fill_parent"  
+    			android:layout_height="200dp"
+    	        android:layout_marginBottom="5dip"  
+   		        android:layout_marginTop="5dip"   
+    	        android:layout_marginLeft="5dip"  
+   		        android:layout_marginRight="5dip"  
+    			android:clickable="true" />
+		</LinearLayout>
+	</LinearLayout>    
+	<RelativeLayout
+		android:orientation="vertical" android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+        android:background="@color/lightgray">
+	   	<TextView android:id="@+id/textViewDetailDDescription" android:inputType="textMultiLine"
+			android:textColor="@color/gray" android:layout_height="wrap_content"
+			android:text="活动介绍"
+			android:textSize="20dip"			
+			android:gravity="left"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_alignParentLeft="true"
+			android:layout_width="wrap_content">
+		</TextView>
+	    <TextView 
+	        android:id="@+id/textViewDetailDescription" android:inputType="textMultiLine"
+			android:textColor="@color/gray"
+			android:gravity="left"
+			android:textSize="20dip"
+			android:layout_below="@+id/textViewDetailDDescription"
+			android:layout_marginLeft="40dp"
+			android:layout_marginRight="10dp"
+			android:layout_alignParentLeft="true"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content">
+		</TextView>
+	</RelativeLayout>
+	<RelativeLayout
+		android:orientation="vertical" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<TextView android:id="@+id/textViewDetailDLimit" 
+			android:textColor="@color/gray"
+			android:gravity="left"
+			android:textSize="20dip"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:text="活动详情"
+			android:layout_alignParentLeft="true"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content">
+		</TextView>
+	<TextView android:id="@+id/textViewDetailLimit"
+		android:textColor="@color/gray" android:layout_height="wrap_content"
+		android:gravity="left"
+		android:textSize="20dip"
+		android:layout_below="@+id/textViewDetailDLimit"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="5dp"
+		android:layout_alignParentLeft="true"
+		android:layout_width="wrap_content">
+	</TextView>
+
+	</RelativeLayout>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

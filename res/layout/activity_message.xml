@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ListView
+		android:id="@+id/listViewMessage"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+	</ListView>
+	<TextView android:id="@+id/textView" android:text="请留言:  "
+		android:textColor="#6495ED" android:layout_height="wrap_content"
+		android:layout_width="wrap_content">
+	</TextView>
+    
+	<RelativeLayout
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		 
+		<EditText android:id="@+id/EditTextMessageGive"
+		    android:layout_marginLeft="5dp"
+			android:layout_marginBottom="5dp"
+			android:textColor="#6495ED" android:layout_height="wrap_content"
+			android:layout_width="fill_parent">
+		</EditText>
+		<Button
+		   	android:id="@+id/buttonMessageOK"
+		   	android:layout_width="80dp"
+	      	android:layout_height="30dp"
+			android:layout_alignParentRight="true"
+		    android:layout_marginBottom="5dp"
+		    android:layout_marginRight="5dp"
+		    android:layout_gravity="right"
+		    android:layout_marginTop="5dp"
+		    android:text="确定"
+	        android:background="@drawable/rectangle_button"
+	        android:textColor="@drawable/rectangle_button_text" />								
+		</RelativeLayout>
+    	
+    
+    
+
+</LinearLayout>
